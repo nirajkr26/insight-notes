@@ -1,6 +1,7 @@
 #INSIGHT NOTES
 
 >git clone https://github.com/nirajkr26/insight-notes.git
+>
 >npm install
 >
 >start tailwind using
