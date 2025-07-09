@@ -1,13 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insight-Notes-All-Notes</title>
     <link rel="stylesheet" href="../src/output.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+
+<body class="text-white m-0 p-0">
+    <div class="min-h-screen flex flex-col bg-gray-800 pb-20">
+        <nav class="flex justify-between bg-gray-900 items-center h-16 z-30 top-0 sticky px-6 ">
+            <div class="logo">Insight-Notes</div>
+            <div class="functions flex justify-evenly gap-2">
+                <button
+                    class="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-sun h-5 w-5">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg></button>
+                <button
+                    class="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user h-5 w-5">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg></button>
+                <button
+                    class="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-log-out h-5  w-5">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" x2="9" y1="12" y2="12"></line>
+                    </svg></button>
+            </div>
+        </nav>
+        <hr class="text-gray-700">
+        <main class="flex-1 overflow-y-auto p-8">
+            <div class="space-y-6">
+                
+                <div class="flex flex-col md:flex-row lg:flex-row items-center justify-between ">
+                    <h2
+                        class="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-700 to-blue-700 bg-clip-text text-transparent">
+                        Your All Academic Notes</h2>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex justify-center rounded-md text-sm font-bold items-center gap-1 border px-4 py-2 h-10 bg-blue-200 text-black cursor-pointer hover:bg-blue-400"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-bot h-4 w-4">
+                                <path d="M12 8V4H8"></path>
+                                <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                                <path d="M2 14h2"></path>
+                                <path d="M20 14h2"></path>
+                                <path d="M15 13v2"></path>
+                                <path d="M9 13v2"></path>
+                            </svg>Ask AI</button>
+                        <button
+                            class="flex justify-center rounded-md text-sm font-bold items-center gap-1 border px-4 py-2 h-10 bg-blue-200 text-black cursor-pointer hover:bg-blue-400"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-circle-plus h-4 w-4">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 12h8"></path>
+                                <path d="M12 8v8"></path>
+                            </svg>New Note</button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search absolute left-2 top-2.5 h-4 w-4 text-muted-foreground">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg><input
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm pl-8"
+                        placeholder="Search notes by title, content, or tags..." value="">
+                </div>
+
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <div
+                        class="rounded-lg border border-gray-700 bg-[#222c39] shadow-sm cursor-pointer hover:shadow-md transition-all duration-200 hover:translate-y-[-2px] relative overflow-hidden group">
+                        <div
+                            class="absolute top-2 right-2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            <button
+                                class="inline-flex hover:bg-gray-900 cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
+                                    <path
+                                        d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                    </path>
+                                </svg><span class="sr-only">Edit</span></button><button
+                                class="inline-flex cursor-pointer hover:bg-gray-900 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm text-destructive hover:text-destructive"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="red" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash h-4 w-4">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg><span class="sr-only">Delete</span></button>
+                        </div>
+                        <div class="flex flex-col space-y-1.5 p-6 pb-2">
+                            <h3 class="font-semibold tracking-tight text-lg truncate">Os</h3>
+                            <p class="text-sm  text-gray-400">about 22 hours ago</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-sm line-clamp-3 mb-3">Os full form is operating system. It is important part
+                                of computer</p>
+                        </div>
+                        <div class="p-6 flex justify-between items-center pt-0">
+                            <div class="flex gap-2 flex-wrap">
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 capitalize transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-red-500 text-white font-bold hover:bg-primary/80 text-xs">
+                                    Important</div>
+                            </div>
+                            <p class="text-xs text-muted-foreground">12 words</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-700 bg-[#222c39] shadow-sm cursor-pointer hover:shadow-md transition-all duration-200 hover:translate-y-[-2px] relative overflow-hidden group">
+                        <div
+                            class="absolute top-2 right-2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            <button
+                                class="inline-flex hover:bg-gray-900 cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
+                                    <path
+                                        d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                    </path>
+                                </svg><span class="sr-only">Edit</span></button><button
+                                class="inline-flex cursor-pointer hover:bg-gray-900 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm text-destructive hover:text-destructive"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="red" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash h-4 w-4">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg><span class="sr-only">Delete</span></button>
+                        </div>
+                        <div class="flex flex-col space-y-1.5 p-6 pb-2">
+                            <h3 class="font-semibold tracking-tight text-lg truncate">Os</h3>
+                            <p class="text-sm  text-gray-400">about 22 hours ago</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-sm line-clamp-3 mb-3">Os full form is operating system. It is important part
+                                of computer</p>
+                        </div>
+                        <div class="p-6 flex justify-between items-center pt-0">
+                            <div class="flex gap-2 flex-wrap">
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 capitalize transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-red-500 text-white font-bold hover:bg-primary/80 text-xs">
+                                    Important</div>
+                            </div>
+                            <p class="text-xs text-muted-foreground">12 words</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-700 bg-[#222c39] shadow-sm cursor-pointer hover:shadow-md transition-all duration-200 hover:translate-y-[-2px] relative overflow-hidden group">
+                        <div
+                            class="absolute top-2 right-2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            <button
+                                class="inline-flex hover:bg-gray-900 cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
+                                    <path
+                                        d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                    </path>
+                                </svg><span class="sr-only">Edit</span></button><button
+                                class="inline-flex cursor-pointer hover:bg-gray-900 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm text-destructive hover:text-destructive"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="red" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash h-4 w-4">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg><span class="sr-only">Delete</span></button>
+                        </div>
+                        <div class="flex flex-col space-y-1.5 p-6 pb-2">
+                            <h3 class="font-semibold tracking-tight text-lg truncate">Os</h3>
+                            <p class="text-sm  text-gray-400">about 22 hours ago</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-sm line-clamp-3 mb-3">Os full form is operating system. It is important part
+                                of computer</p>
+                        </div>
+                        <div class="p-6 flex justify-between items-center pt-0">
+                            <div class="flex gap-2 flex-wrap">
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 capitalize transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-red-500 text-white font-bold hover:bg-primary/80 text-xs">
+                                    Important</div>
+                            </div>
+                            <p class="text-xs text-muted-foreground">12 words</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-700 bg-[#222c39] shadow-sm cursor-pointer hover:shadow-md transition-all duration-200 hover:translate-y-[-2px] relative overflow-hidden group">
+                        <div
+                            class="absolute top-2 right-2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            <button
+                                class="inline-flex hover:bg-gray-900 cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
+                                    <path
+                                        d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                    </path>
+                                </svg><span class="sr-only">Edit</span></button><button
+                                class="inline-flex cursor-pointer hover:bg-gray-900 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm text-destructive hover:text-destructive"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="red" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash h-4 w-4">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg><span class="sr-only">Delete</span></button>
+                        </div>
+                        <div class="flex flex-col space-y-1.5 p-6 pb-2">
+                            <h3 class="font-semibold tracking-tight text-lg truncate">Os</h3>
+                            <p class="text-sm  text-gray-400">about 22 hours ago</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-sm line-clamp-3 mb-3">Os full form is operating system. It is important part
+                                of computer</p>
+                        </div>
+                        <div class="p-6 flex justify-between items-center pt-0">
+                            <div class="flex gap-2 flex-wrap">
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 capitalize transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-red-500 text-white font-bold hover:bg-primary/80 text-xs">
+                                    Important</div>
+                            </div>
+                            <p class="text-xs text-muted-foreground">12 words</p>
+                        </div>
+
+                    </div>
+                    <div
+                        class="rounded-lg border border-gray-700 bg-[#222c39] shadow-sm cursor-pointer hover:shadow-md transition-all duration-200 hover:translate-y-[-2px] relative overflow-hidden group">
+                        <div
+                            class="absolute top-2 right-2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            <button
+                                class="inline-flex hover:bg-gray-900 cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
+                                    <path
+                                        d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                    </path>
+                                </svg><span class="sr-only">Edit</span></button><button
+                                class="inline-flex cursor-pointer hover:bg-gray-900 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm text-destructive hover:text-destructive"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="red" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash h-4 w-4">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg><span class="sr-only">Delete</span></button>
+                        </div>
+                        <div class="flex flex-col space-y-1.5 p-6 pb-2">
+                            <h3 class="font-semibold tracking-tight text-lg truncate">Os</h3>
+                            <p class="text-sm  text-gray-400">about 22 hours ago</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-sm line-clamp-3 mb-3">Os full form is operating system. It is important part
+                                of computer</p>
+                        </div>
+                        <div class="p-6 flex justify-between items-center pt-0">
+                            <div class="flex gap-2 flex-wrap">
+                                <div
+                                    class="inline-flex items-center rounded-full border px-2.5 py-0.5 capitalize transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-red-500 text-white font-bold hover:bg-primary/80 text-xs">
+                                    Important</div>
+                            </div>
+                            <p class="text-xs text-muted-foreground">12 words</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </main>
+
+        <div
+            class="flex items-center border overflow-hidden  border-gray-400 justify-around rounded-2xl fixed z-10 h-13 w-7/12 self-center bottom-3 bg-gray-900">
+            <a href="dashboard.html" target="_self"
+                class="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700 flex items-center gap-1"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-house h-5 w-5">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                    <path
+                        d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+                    </path>
+                </svg>
+                <p class="hidden lg:inline">Dashboard</p>
+            </a>
+            <a href="all-notes.html" target="_self"
+                class="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700  flex items-center gap-1"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-file-text h-5 w-5">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <path d="M10 9H8"></path>
+                    <path d="M16 13H8"></path>
+                    <path d="M16 17H8"></path>
+                </svg>
+                <p class="hidden lg:inline">All Notes</p>
+            </a>
+            <a href="creativity.html" target="_self"
+                class="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700  flex items-center gap-1"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-sparkles h-5 w-5">
+                    <path
+                        d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                    </path>
+                    <path d="M20 3v4"></path>
+                    <path d="M22 5h-4"></path>
+                    <path d="M4 17v2"></path>
+                    <path d="M5 18H3"></path>
+                </svg>
+                <p class="hidden lg:inline">Creativity</p>
+            </a>
+            <a href="settings.html" target="_self"
+                class="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700  flex items-center gap-1"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-settings h-5 w-5">
+                    <path
+                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                    </path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <p class="hidden lg:inline">Settings</p>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>
