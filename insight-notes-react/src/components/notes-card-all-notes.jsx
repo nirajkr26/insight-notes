@@ -1,9 +1,14 @@
-function NotesCard() {
+function NotesCardAllNotes() {
     return (
         <>
             <Title/>
             <SearchBar />
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
                 <Card/>
                 <Card/>
                 <Card/>
@@ -19,7 +24,7 @@ function Title(){
         <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between ">
                 <h2
                     className="text-2xl font-bold tracking-tight bg-gradient-to-r from-indigo-700 to-blue-700 bg-clip-text text-transparent">
-                    Your Academic Notes</h2>
+                    Your All Academic Notes</h2>
                 <div className="flex gap-2">
                     <button
                         className="flex justify-center rounded-md text-sm font-bold items-center gap-1 border px-4 py-2 h-10 bg-blue-200 text-black cursor-pointer hover:bg-blue-400"><svg
@@ -107,4 +112,4 @@ function Card() {
     )
 }
 
-export default NotesCard;
+export default NotesCardAllNotes;
