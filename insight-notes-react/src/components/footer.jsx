@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
     return (
         <div
             className="flex items-center border overflow-hidden  border-gray-400 justify-around rounded-2xl fixed z-10 h-13 w-7/12 self-center bottom-3 bg-gray-900">
-            <a href="dashboard.html" target="_self"
+            <Link to="/dashboard"  
                 className="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700 flex items-center gap-1"><svg
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -13,8 +15,8 @@ function Footer() {
                     </path>
                 </svg>
                 <p className="hidden lg:inline">Dashboard</p>
-            </a>
-            <a href="all-notes.html" target="_self"
+            </Link>
+            <Link to="/notes"  
                 className="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700  flex items-center gap-1"><svg
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -26,8 +28,8 @@ function Footer() {
                     <path d="M16 17H8"></path>
                 </svg>
                 <p className="hidden lg:inline">All Notes</p>
-            </a>
-            <a href="creativity.html" target="_self"
+            </Link>
+            <Link to="/creativity"  
                 className="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700  flex items-center gap-1"><svg
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -41,8 +43,8 @@ function Footer() {
                     <path d="M5 18H3"></path>
                 </svg>
                 <p className="hidden lg:inline">Creativity</p>
-            </a>
-            <a href="settings.html" target="_self"
+            </Link>
+            <Link to="/settings"  
                 className="cursor-pointer px-3 py-1 rounded-full hover:bg-gray-700  flex items-center gap-1"><svg
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -53,7 +55,7 @@ function Footer() {
                     <circle cx="12" cy="12" r="3"></circle>
                 </svg>
                 <p className="hidden lg:inline">Settings</p>
-            </a>
+            </Link>
         </div>
     )
 }
