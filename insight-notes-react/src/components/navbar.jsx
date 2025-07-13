@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+    const navigate=useNavigate();
+
+    const handleLogout=()=>{
+        navigate('/login')
+    }
     return (
         <nav className="flex justify-between bg-gray-900 items-center h-16 z-30 top-0 sticky px-6">
             <div className="logo flex gap-1 items-center">
@@ -50,7 +57,7 @@ function Navbar() {
                         <circle cx="12" cy="7" r="4" />
                     </svg>
                 </button>
-                <button aria-label="Logout"
+                <button onClick={handleLogout} aria-label="Logout"
                     className="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
