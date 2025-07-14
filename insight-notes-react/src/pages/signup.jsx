@@ -40,7 +40,7 @@ function SignUp() {
                     </form>
                 </div> */}
                 <SignedOut>
-                    <SignInButton signUpForceRedirectUrl={"/"} className="flex bg-white text-black px-4 py-2 rounded-lg font-bold text-2xl tracking-tight cursor-pointer hover:bg-gray-200"/>
+                    <SignInButton forceRedirectUrl={"/"} className="flex bg-white text-black px-4 py-2 rounded-lg font-bold text-2xl tracking-tight cursor-pointer hover:bg-gray-200"/>
                 </SignedOut>
             </div>
         </>

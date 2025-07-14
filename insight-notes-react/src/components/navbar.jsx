@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
-
+import { useClerk } from '@clerk/clerk-react'
 
 function Navbar() {
     const navigate = useNavigate();
-
+    const { signOut } = useClerk()
     const handleLogout = () => {
+
         navigate('/login')
     }
     return (
@@ -63,7 +64,7 @@ function Navbar() {
                 <SignedIn>
                     <UserButton />
                 </SignedIn>
-                <button onClick={handleLogout} aria-label="Logout"
+                <button  onClick={() => signOut({ redirectUrl: '/login' })} aria-label="Logout"
                     className="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
