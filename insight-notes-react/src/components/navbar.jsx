@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
+
 
 function Navbar() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
-    const handleLogout=()=>{
+    const handleLogout = () => {
         navigate('/login')
     }
     return (
@@ -47,7 +49,7 @@ function Navbar() {
                         <path d="m19.07 4.93-1.41 1.41" />
                     </svg>
                 </button>
-                <button aria-label="User profile"
+                {/* <button aria-label="User profile"
                     className="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
@@ -56,7 +58,11 @@ function Navbar() {
                         <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                         <circle cx="12" cy="7" r="4" />
                     </svg>
-                </button>
+                </button> */}
+                
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
                 <button onClick={handleLogout} aria-label="Logout"
                     className="font-medium rounded-full flex items-center justify-center hover:bg-gray-700 text-sm w-10 h-10 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -70,7 +76,7 @@ function Navbar() {
                 </button>
             </div>
         </nav>
-        
+
     );
 }
 

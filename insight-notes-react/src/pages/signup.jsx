@@ -1,3 +1,5 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
+
 function SignUp() {
     return (
         <>
@@ -11,7 +13,7 @@ function SignUp() {
                     <h2 className="text-3xl tracking-tight font-bold mb-2">Insight Notes</h2>
                     <p className="mb-8 text-gray-300">Take smarter notes with AI-powered insights and analysis.</p>
                 </div>
-                <div className="rounded-lg border border-gray-700 bg-[#222c39] w-full max-w-md mx-auto ">
+                {/* <div className="rounded-lg border border-gray-700 bg-[#222c39] w-full max-w-md mx-auto ">
                     <div className="flex flex-col space-y-1.5 p-6">
                         <h3 className="font-semibold tracking-tight text-2xl text-center">Create Account</h3>
                         <p className="text-sm text-center text-gray-300">Sign up to start organizing your thoughts with AI</p>
@@ -36,8 +38,10 @@ function SignUp() {
                             <button className="flex justify-center items-cente text-gray-200 w-full py-2 rounded-lg font-bold tracking-tight cursor-pointer hover:bg-gray-900">Already have an account? Sign In</button>
                         </div>
                     </form>
-                </div>
-
+                </div> */}
+                <SignedOut>
+                    <SignInButton signUpForceRedirectUrl={"/"} className="flex bg-white text-black px-4 py-2 rounded-lg font-bold text-2xl tracking-tight cursor-pointer hover:bg-gray-200"/>
+                </SignedOut>
             </div>
         </>
     )
