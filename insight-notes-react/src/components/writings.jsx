@@ -9,7 +9,7 @@ function Writings() {
 
 function Title() {
     return (
-        <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row items-center justify-between ">
+        <div className="flex flex-col sm:flex-row md:flex-row pt-4 lg:flex-row items-center justify-between ">
             <h2 className="text-2xl font-bold tracking-tight text-white bg-clip-text ">
                 All Writings</h2>
             <div className="flex gap-2">
